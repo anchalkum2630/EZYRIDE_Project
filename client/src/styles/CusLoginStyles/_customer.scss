@@ -1,0 +1,50 @@
+// src/MainCustomer.scss
+@use "../global" as *;
+
+/* src/styles/Main_customer.css */
+
+.main-customer-container {
+  /* This class would be used if you have a specific wrapper for additional styling */
+  margin-top: 50px; /* Adjust this value to control the top margin */
+}
+
+.header-title {
+  /* Additional styles for header titles if needed */
+  color: #333; /* Dark gray color */
+}
+
+.header-subtitle {
+  /* Additional styles for header subtitles if needed */
+  color: #666; /* Medium gray color */
+}
+
+.form-container {
+  /* This class would be used for additional form container styles */
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.button-custom {
+  /* Custom button styles if needed */
+  background-color: #4a90e2; /* Custom blue color */
+  color: #fff; /* White text */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding for button */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.button-custom:hover {
+  background-color: #357ABD; /* Darker blue on hover */
+}
+
+.link-custom {
+  /* Custom link styles */
+  color: #4a90e2; /* Custom blue color */
+  text-decoration: none; /* Remove underline */
+}
+
+.link-custom:hover {
+  text-decoration: underline; /* Underline on hover */
+}

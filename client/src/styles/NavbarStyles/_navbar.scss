@@ -1,0 +1,243 @@
+// Import global styles (if necessary)
+@use "../global/" as *;
+
+// Navbar Styles
+.navbar {
+  max-width: 133rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.7rem 2rem;
+  background-color: transparent;
+  z-index: 99999;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease-in-out;
+
+  &.sticky {
+    position: fixed;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 2rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    width: 14.5rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+    gap: 2.1rem;
+
+    a {
+      font-size: $p-size;
+      font-family: $text-font;
+      font-weight: 500;
+      color: $text-black;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $text-orange;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 2.5rem;
+    font-size: $p-size;
+    font-family: $text-font;
+    font-weight: 500;
+    align-items: center;
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+    &__register {
+      background-color: $text-orange;
+      color: white;
+      padding: 1.5rem 3rem;
+      border-radius: 3px;
+      box-shadow: 0 10px 15px 0 rgb(255 83 48 / 35%);
+      transition: all 0.3s;
+
+      &:hover {
+        box-shadow: 0 10px 15px 0 rgb(255 83 48 / 50%);
+        background-color: #fa4226;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+// Mobile and Tablet Nav Styles
+
+.mobile-hamb {
+  font-size: 2.8rem;
+  display: none;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $text-orange;
+  }
+
+  @media (max-width: 1000px) {
+    display: flex;
+  }
+}
+
+.mobile-navbar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  background-color: $bg-white;
+  z-index: 999999;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+
+  &__close {
+    font-size: 3rem;
+    position: absolute;
+    top: 3.5rem;
+    right: 3.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $text-orange;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 2.3rem;
+    gap: 3rem;
+    text-align: center;
+
+    li {
+      a {
+        text-decoration: none;
+        color: $text-black;
+        font-weight: 500;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $text-orange;
+        }
+      }
+    }
+  }
+}
+
+.open-nav {
+  left: 0;
+}
+
+
+// .navbar__register-dropdown {
+//   position: relative;
+//   display: inline-block;
+// }
+
+
+// .navbar__register-dropdown {
+//   position: relative;
+//   display: inline-block;
+// }
+
+// .dropdown-menu {
+//   display: none; 
+//   position: absolute;
+  
+//   top: 100%;
+//   right: 0;
+//   background-color: $bg-white;
+//   border: 1px solid $text-black;
+//   border-radius: 3px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   z-index: 1000;
+//   transition: opacity 0.3s ease, transform 0.3s ease;
+//   opacity: 0; 
+//   transform: translateY(-10px); 
+
+//   &.show {
+//     display: block;
+//     opacity: 1;
+//     transform: translateY(0); 
+//   }
+  
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     top: -10px;
+//     right: 10px;
+//     width: 0;
+//     height: 0;
+//     border-width: 10px;
+//     border-style: solid;
+//     border-color: transparent transparent $bg-white transparent;
+//   }
+// }
+
+// .dropdown-item {
+//   padding: 1rem 2rem;
+//   font-size: $p-size;
+//   font-family: $text-font;
+//   font-weight: 500;
+//   color: $text-black;
+//   text-decoration: none;
+//   display: block;
+//   transition: background-color 0.3s, color 0.3s;
+
+//   &:hover {
+//     background-color: $text-orange;
+//     color: white;
+//   }
+// }
+
+
+// Media Queries for Responsiveness
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .mobile-hamb {
+    display: block;
+  }
+}
