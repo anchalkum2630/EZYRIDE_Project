@@ -10,13 +10,13 @@ function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false); // Toggle dropdown for registration
   const [userName, setUserName] = useState('');
 
-  useEffect(() => {
-    // Retrieve user name from local storage
-    const storedName = localStorage.getItem('userName');
-    if (storedName) {
-      setUserName(storedName);
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Retrieve user name from local storage
+  //   const storedName = localStorage.getItem('userName');
+  //   if (storedName) {
+  //     setUserName(storedName);
+  //   }
+  // }, []);
 
   const toggleNav = () => {
     setNav(!nav); // Toggle mobile menu
